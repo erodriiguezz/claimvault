@@ -1,4 +1,6 @@
-import { ExclamationTriangleIcon, DocumentPlusIcon, CameraIcon, PhoneIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import logo from "../public/logo.png";
+import { UserIcon, ExclamationTriangleIcon, DocumentPlusIcon, CameraIcon, PhoneIcon, InformationCircleIcon } from "@heroicons/react/20/solid";
 
 export default function Home() {
   const actions = [
@@ -35,6 +37,18 @@ export default function Home() {
   return (
     <div className="font-sans bg-zinc-50 text-[#111827] dark:bg-gray-950 dark:text-white min-h-screen">
       <main className="">
+        {/*  */}
+        <div className="px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Image src={logo} alt="logo" width={32} />
+            <p className="font-semibold">ClaimVault</p>
+          </div>
+
+          <div className="rounded-full bg-[#2563EB] p-1">
+            <UserIcon className="w-6 h-6 text-white" />
+          </div>
+        </div>
+
         {/* emergency banner */}
         <div className="bg-red-500 text-white px-6 py-4 flex justify-between items-center gap-2">
           <div className="flex items-center gap-2">
@@ -43,7 +57,7 @@ export default function Home() {
             </div>
 
             <div>
-              <p className="text-sm font-bold">Emergency Assistance</p>
+              <p className="text-sm font-semibold">Emergency Assistance</p>
               <p className="text-sm">Call 911 if anyone is injured</p>
             </div>
           </div>
@@ -76,7 +90,13 @@ export default function Home() {
         </div>
 
         {/* guides */}
-        <div></div>
+        <div className="p-6">
+          <div className="flex items-center justify-between">
+            <h2 className="font-bold text-lg">Step-by-Step Guide</h2>
+
+            <div className="text-sm text-blue-600 bg-blue-200 px-4 py-2 rounded-full leading-none">2/7 Completed</div>
+          </div>
+        </div>
 
         {/* menu */}
         <div></div>
